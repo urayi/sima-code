@@ -1,3 +1,4 @@
+export const Blocks = `
 <xml id="toolbox" style="display: none;">
   <category name="Movimientos" colour="#6d5ba5">
     <block type="start"></block>
@@ -96,3 +97,4 @@
     </block>
   </category>
 </xml>
+`
