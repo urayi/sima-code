@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import * as moment from 'moment';
 import { UploadDataService } from '../services/upload-data.service';
 import { Orden } from '../models/orden.model';
-import { Command } from '../models/command.model';
-import Swal from 'sweetalert2'
+// import { Command } from '../models/command.model';
+import Swal from 'sweetalert2';
 declare var Blockly: any;
 
 @Component({
@@ -30,6 +30,7 @@ export class DashboardComponent implements OnInit {
   createBlocks() {
 
     this.xml.open('GET', 'assets/blockly/blocks.xml', false);
+    console.log(this.xml);
     this.xml.send();
     const xmlFinal = this.xml.responseXML;
     this.toolbox = new XMLSerializer().serializeToString(xmlFinal);
@@ -78,6 +79,7 @@ export class DashboardComponent implements OnInit {
           title: 'Opsss...',
           text: 'Parece que hubo un problema en la casa de SIMA',
           type: 'error',
+          confirmButtonColor: '#F27474',
           onClose: () => {
             this.btnJugar = 'Jugar';
           }
@@ -88,7 +90,7 @@ export class DashboardComponent implements OnInit {
 
   }
 
-  parseJwt(jwt) {
+  parseJwt(jwt: string) {
     const base64Url = jwt.split('.')[1];
     const base64 = base64Url.replace('-', '+').replace('_', '/');
     return JSON.parse(window.atob(base64));

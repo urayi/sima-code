@@ -158,8 +158,8 @@ Blockly.Blocks['tilt'] = {
 Blockly.Blocks['move_hands'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField('Mueve')
-        .appendField(new Blockly.FieldDropdown([['Ambas','Both'], ['Derecha','Right'], ['Izquierda','Left']]), 'hand')
+        .appendField('Mueve la mano')
+        .appendField(new Blockly.FieldDropdown([['Derecha','Right'], ['Izquierda','Left'], ['Ambas','Both']]), 'hand')
         .appendField(new Blockly.FieldDropdown([['Arriba\u0020\u2191','Up'], ['Abajo\u0020\u2193','Down']]), 'direction');
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);

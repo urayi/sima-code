@@ -16,7 +16,7 @@
       <field name="side">Right</field>
     </block>
     <block type="move_hands">
-      <field name="hand">Both</field>
+      <field name="hand">Right</field>
       <field name="direction">Up</field>
     </block>
     <block type="move_legs">
