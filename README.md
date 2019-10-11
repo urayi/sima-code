@@ -1,2 +1,2 @@
 # sima-code
-Platafporma CODE de Simarobot
+Plataforma CODE de Simarobot
